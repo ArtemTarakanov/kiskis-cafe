@@ -567,17 +567,22 @@ body {
     /* === ХЕДЕР === */
     .header {
         height: auto;
-        min-height: 75px;
-        padding: 10px 15px;
+        min-height: 60px;
+        padding: 8px 15px;
         flex-direction: column;
-        gap: 15px;
-        
+        gap: 10px;
+        position:fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
         background-color: white;
+        transition: transform 0.3s ease;
     }
+
+    .header.hidden {
+    transform: translateY(-100%); /* скрытие header */
+}
     
     .logo-container {
         gap: 10px;
@@ -617,7 +622,7 @@ body {
     
     /* === ОТСТУП ОТ ФИКСИРОВАННОГО ХЕДЕРА === */
     body {
-        padding-top: 140px; /* Увеличиваем отступ для мобильного хедера */
+        padding-top: 100px; /* Увеличиваем отступ для мобильного хедера */
     }
     
     /* === ГЛАВНАЯ СЕКЦИЯ === */
@@ -956,7 +961,7 @@ body {
     }
     
     body {
-        padding-top: 120px;
+        padding-top: 85px;
     }
 }
 

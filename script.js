@@ -150,3 +150,36 @@ cat.addEventListener('click', catchCat);
 
 // Инициализация - скрываем котика
 cat.style.display = 'none';
+
+
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function() {
+    // Проверяем, что ширина экрана меньше 768px (мобильные устройства)
+    if (window.innerWidth <= 768) {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Прокрутка вниз - скрываем header
+            header.classList.add('hidden');
+        } else {
+            // Прокрутка вверх - показываем header
+            header.classList.remove('hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    } else {
+        // На ПК всегда показываем header
+        header.classList.remove('hidden');
+    }
+});
+
+// Также нужно проверить при изменении размера окна
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        header.classList.remove('hidden');
+    }
+});
