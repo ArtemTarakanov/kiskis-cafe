@@ -580,9 +580,7 @@ body {
         transition: transform 0.3s ease;
     }
 
-    .header.hidden {
-    transform: translateY(-100%); /* скрытие header */
-}
+    
     
     .logo-container {
         gap: 10px;
