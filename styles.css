@@ -571,7 +571,7 @@ body {
         padding: 8px 15px;
         flex-direction: column;
         gap: 10px;
-        
+        position:fixed;
         top: 0;
         left: 0;
         width: 100%;
