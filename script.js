@@ -154,28 +154,3 @@ cat.style.display = 'none';
 
 
 
-let lastScrollTop = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', function() {
-    // Увеличиваем до 1024px чтобы включить все мобильные и планшеты
-    if (window.innerWidth <= 1024) {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 50) { // уменьшил порог с 100 до 50
-            header.classList.add('hidden');
-        } else {
-            header.classList.remove('hidden');
-        }
-        
-        lastScrollTop = scrollTop;
-    } else {
-        header.classList.remove('hidden');
-    }
-});
-
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 1024) {
-        header.classList.remove('hidden');
-    }
-});

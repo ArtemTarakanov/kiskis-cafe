@@ -613,16 +613,16 @@ body {
     
     .navigation a {
         display: block;
-        width: 100%;
-        max-width: 200px;
-        padding: 8px 15px;
+        width: auto; /* вместо 100% */
+        max-width: none; /* убираем ограничение */
+        padding: 6px 12px; /* уменьшили отступы */
         text-align: center;
-        font-size: 16px;
+        font-size: 14px; /* уменьшили размер шрифта */
     }
     
     /* === ОТСТУП ОТ ФИКСИРОВАННОГО ХЕДЕРА === */
     body {
-        padding-top: 100px; /* Увеличиваем отступ для мобильного хедера */
+        padding-top: 90px; /* Увеличиваем отступ для мобильного хедера */
     }
     
     /* === ГЛАВНАЯ СЕКЦИЯ === */
