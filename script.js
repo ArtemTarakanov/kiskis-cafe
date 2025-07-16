@@ -158,28 +158,24 @@ let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function() {
-    // Проверяем, что ширина экрана меньше 768px (мобильные устройства)
-    if (window.innerWidth <= 768) {
+    // Увеличиваем до 1024px чтобы включить все мобильные и планшеты
+    if (window.innerWidth <= 1024) {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Прокрутка вниз - скрываем header
+        if (scrollTop > lastScrollTop && scrollTop > 50) { // уменьшил порог с 100 до 50
             header.classList.add('hidden');
         } else {
-            // Прокрутка вверх - показываем header
             header.classList.remove('hidden');
         }
         
         lastScrollTop = scrollTop;
     } else {
-        // На ПК всегда показываем header
         header.classList.remove('hidden');
     }
 });
 
-// Также нужно проверить при изменении размера окна
 window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
         header.classList.remove('hidden');
     }
 });
