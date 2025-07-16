@@ -597,7 +597,7 @@ body {
     
     /* === НАВИГАЦИЯ === */
     .navigation {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         width: 100%;
         align-items: center;
