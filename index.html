@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>KIS_KIS CAFE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+            <div class="logotype">
+                <img src="images/logo_3.png" alt="KIS-KIS CAFE logo" class="logo" />
+            </div>
+            <div class="logo-text">KIS-KIS CAFE</div>
+        </div>
+        <nav>
+            <ul class="navigation">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="separator"></div>
+
+    <section id="hero">
+        <h1>Добро пожаловать в KIS-KIS CAFE!</h1>
+        <h2>Начни день с ароматного кофе!</h2>
+        <button id="menu-button">Смотреть меню</button>
+    </section>
+    
+    <section id="about">
+        <div class="about-box">
+            <div class="title-about">О нас</div>
+
+            <div class="about-row">
+                <div class="image">
+                    <img src="images/photo1.jpeg" alt="Кот в кафе" />
+                </div>
+                <div class="text">
+                    <p>Мы — маленькая уютная кофейня в самом сердце города, где каждый гость чувствует себя как дома. Наша миссия — дарить радость и тепло через ароматный кофе, свежую выпечку и искреннюю заботу о каждом посетителе.</p>
+                </div>
+            </div>
+
+            <div class="about-row reverse">
+                <div class="image">
+                    <img src="images/photo2.jpg" alt="Девушка с котом" />
+                </div>
+                <div class="text">
+                    <p>В KIS-KIS CAFE мы объединяем лучшие традиции кофейного искусства с особенной атмосферой уюта и комфорта. Здесь можно найти не только вкусные напитки, но и место для отдыха, встреч с друзьями и вдохновения.</p>
+                </div>
+            </div>
+
+            <div class="about-row">
+                <div class="image">
+                    <img src="images/photo3.jpeg" alt="Кот на подоконнике" />
+                </div>
+                <div class="text">
+                    <p>Мы заботимся о качестве каждого ингредиента — от тщательно отобранных кофейных зёрен до свежих натуральных продуктов в десертах. Наши бариста — настоящие мастера своего дела, готовые создать для вас идеальный напиток.</p>
+                </div>
+            </div>
+
+            <div class="about-row reverse">
+                <div class="image">
+                    <img src="images/photo4.jpeg" alt="Кот в витрине кафе" />
+                </div>
+                <div class="text">
+                    <p>Вдохновлённые любовью к котикам, мы сделали наш интерьер тёплым и живым, чтобы вы чувствовали уют и радость с каждой чашкой. Добро пожаловать в KIS-KIS CAFE — место, где всегда рады вам и вашим пушистым друзьям!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    
+
+        
+    <section id="menu">
+    <h2 class="menu-title">🐾 Наше меню 🐾</h2>
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <div class="icon">☕</div>
+            <h3>Карамельный Мурчино</h3>
+            <p>Сладкий латте с карамельным сиропом и взбитыми сливками — мурчишь от удовольствия.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="icon">🍵</div>
+            <h3>Чай «Мяу-Мята»</h3>
+            <p>Травяной сбор с мятой, ромашкой и мелиссой — идеален после тяжёлого дня.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="icon">🍫</div>
+            <h3>Кис-Кис Какао</h3>
+            <p>Горячий шоколад с маршмеллоу и корицей — словно кот спит у тебя на коленях.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="icon">🍪</div>
+            <h3>Печенье «Кошачьи лапки»</h3>
+            <p>Мягкие, ванильные, с шоколадными подушечками — съесть и обнять.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="icon">🍰</div>
+            <h3>Мур-кейк</h3>
+            <p>Нежный чизкейк с клубничным соусом, который хочется утащить в угол.</p>
+        </div>
+
+    </div>
+    </section>
+
+
+
+    <section id="game">
+        <h2 class="game-title"> Сцапай кота! </h2>
+        <div class="game-info">
+            <div class="score">Счет: <span id="score-value">0</span></div>
+            <div class="timer">Время: <span id="time-value">30</span></div>
+        </div>
+        <div id="game-container">
+            <img id="cat" src="images/game.png" alt="Котик для игры">
+            <button id="start-btn">Начать игру</button>
+            <div id="game-over" class="hidden">
+                <h3>Игра окончена!</h3>
+                <p>Ваш результат: <span id="final-score">0</span> котиков</p>
+                <button id="restart-btn">Играть снова</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="contacts">
+        <div class="contact-box">
+            <div class="contacts"> <strong>Контакты</strong></div>
+            <p class="adress"><strong>Адрес: </strong>ул. Кофейная, пгт Сириус</p>
+            <p class="number"> <strong>Телефон: </strong>+7 (964) 259-17-17 </p>
+            <p class="email"> <strong>Email: </strong><a href="mailto:artemtarakanov2505@gmail.com">artemtarakanov2505@gmail.com </a></p>
+            </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <img src="images/logo_5.png" alt="pows" class="pows"/>
+</body>
+</html>

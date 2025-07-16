@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header {
+    
+    height: 75px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 100px;
+
+    background-color: white;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><text y="30" x="50" text-anchor="middle" font-size="20" opacity="0.15">🐾</text></svg>');
+    background-repeat: repeat;
+    background-size: 100px 50px;
+    
+    
+    position: fixed;
+    top: 0;           /* прижимаем к верхнему краю */
+    left: 0;          /* прижимаем к левому краю */
+    width: 100%;      /* чтобы хэдер растягивался на всю ширину */
+    z-index: 1000;    /* чтобы хэдер был поверх остальных элементов */
+
+    
+}
+
+
+
+.separator{             /*полоска бошки */
+    color: black;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+}
+
+.navigation{            /*сама менюшка */
+    display: flex;
+    gap: 75px;
+    list-style: none;
+    
+    
+}
+
+.navigation a{          /*ссылки менюшки */
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px; /* отступы внутри кнопки */
+    border: 2px solid black; /* черная граница */
+    border-radius: 25px; /* овальная форма */
+    display: inline-block; /* чтобы padding работал правильно */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navigation a:hover {
+    background-color: black;
+    color: white;
+}
+
+.navigation li {
+    font-family: 'Winky Rough', cursive;
+    font-size: 20px;
+    
+}
+
+.logo-container{       /* общий пак логотипа и эмблемы*/
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{                  /* просто эмблема*/
+    height: 60px;
+    width: auto;
+}
+
+.logo-text{             /* просто лого */
+    font-family: 'Winky Rough', cursive;
+    font-size: 45px;
+}
+
+
+
+body {
+    padding-top: 75px; /* чтобы контент не прятался под фиксированным хедером */
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    background: url('images/hero-background.jpg') center/cover no-repeat;
+    color: #3b2f2f;
+    text-align: center;
+    font-family: 'Winky Rough', cursive;
+    font-size: 20px;
+    gap: 20px;
+    min-height: 400px;
+    box-shadow: inset 0 0 100px rgba(255,255,255,0.3);
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+#hero h2 {
+    font-size: 24px;
+    max-width: 600px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+#menu-button {
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 40px;
+    background-color: #3b2f2f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+#menu-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><text y="30" x="50" text-anchor="middle" font-size="20" opacity="0.15">🐾</text></svg>');
+    background-repeat: repeat;
+    background-size: 30px 30px;
+}
+
+
+.pows{
+    
+    
+    height: 600px;
+    width: auto;
+    margin-left: 320px;
+    margin-top: -300px;
+    padding: 0;
+    
+}
+
+
+.menu-btn{
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 12px 10px;
+    height: 60px;
+    width: 130px;
+    
+    display: flex; 
+    justify-content: center; /* Центр по горизонтали */
+    align-items: center;     /* Центр по вертикали */
+
+    font-family: 'Winky Rough', cursive;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 200px;
+    margin-top: 70px;
+}
+
+.menu-title {
+    font-family: 'Winky Rough', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    color: #3b2f2f;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 40px 60px;
+}
+
+.menu-card {
+    background-color: #fff8f0;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.menu-card h3 {
+    font-family: 'Winky Rough', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #443333;
+}
+
+.menu-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #5c4a4a;
+    line-height: 1.5;
+}
+
+.about-box {
+    max-width: 1200px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+}
+
+.title-about {
+    font-family: 'Winky Rough', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: start;
+    color: #3b2f2f;
+    margin-bottom: 40px;
+}
+
+/* Контейнер для каждой пары */
+.about-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* Для четных рядов — меняем порядок на обратный */
+.about-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Картинка фиксированного размера */
+.about-row .image img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Текст рядом с картинкой */
+.about-row .text {
+    max-width: 600px;
+}
+
+/* Параграф текста */
+.about-row .text p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #5c4a4a;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-row .text p:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column !important; /* На мобильных всегда вертикально */
+    }
+
+    .about-row .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-row .text {
+        max-width: 100%;
+    }
+}
+
+.contact-box{
+    max-width: 1200px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+}
+
+.contacts {
+    font-family: 'Winky Rough', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: start;
+    color: #3b2f2f;
+    margin-bottom: 40px;
+}
+
+.contact-box p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #5c4a4a;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-box p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.email a{
+    text-decoration: none;
+    color: #5c4a4a
+}
+
+
+
+
+/* Основные стили игры */
+/* === ИГРА "ПОЙМАЙ КОТИКА" === */
+
+/* === ИГРА "СЦАПАЙ КОТА!" === */
+
+#game {
+    padding: 80px 20px;
+    
+    text-align: center;
+}
+
+.game-title {
+    font-family: 'Winky Rough', cursive;
+    font-size: 36px;
+    color: #3b2f2f;
+    margin-bottom: 30px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.score, .timer {
+    font-family: 'Winky Rough', cursive;
+    font-size: 24px;
+    color: #3b2f2f;
+    background-color: #fff8f0;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#game-container {
+    width: 600px;
+    height: 400px;
+    border: 3px solid #3b2f2f;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff8f0;
+    overflow: hidden;
+}
+
+/* Котик */
+#cat {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+    display: none;
+}
+
+#cat:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+/* Кнопка старта */
+#start-btn {
+    font-family: 'Winky Rough', cursive;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #3b2f2f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+#start-btn:hover {
+    background-color: #2a1f1f;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Скрытые элементы */
+.hidden {
+    display: none !important;
+}
+
+/* Окно окончания игры */
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    font-family: 'Winky Rough', cursive;
+    text-align: center;
+    min-width: 280px;
+    z-index: 100;
+}
+
+#game-over h3 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #3b2f2f;
+}
+
+#game-over p {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    color: #5c4a4a;
+}
+
+/* Кнопка перезапуска */
+#restart-btn {
+    font-family: 'Winky Rough', cursive;
+    font-size: 18px;
+    padding: 12px 25px;
+    background-color: #3b2f2f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: static;
+    transform: none;
+}
+
+#restart-btn:hover {
+    background-color: #2a1f1f;
+    transform: scale(1.05);
+}
+
+/* Анимации */
+#cat.appear {
+    animation: catAppear 0.5s ease;
+}
+
+@keyframes catAppear {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+#cat.caught {
+    animation: catCaught 0.4s ease;
+}
+
+@keyframes catCaught {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    #game-container {
+        width: 90%;
+        height: 300px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #cat {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #game-over {
+        width: 90%;
+        min-width: auto;
+    }
+}
