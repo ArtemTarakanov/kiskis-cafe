@@ -552,3 +552,124 @@ body {
         min-width: auto;
     }
 }
+
+
+
+/*АДАПТИВ*/
+
+@media (max-width: 768px) {
+  /* Шапка */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .navigation li {
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 32px;
+  }
+
+  /* Hero секция */
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+  }
+
+  #menu-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  /* О нас */
+  .about-row {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-row .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-row .text p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  /* Меню */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .menu-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu-card h3 {
+    font-size: 20px;
+  }
+
+  .menu-card p {
+    font-size: 14px;
+  }
+
+  /* Игра */
+  #game-container {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  #cat {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score, .timer {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* Контакты */
+  .contacts {
+    font-size: 28px;
+  }
+
+  .contact-box p {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Доп. элементы */
+  .pows {
+    width: 100%;
+    height: auto;
+    margin: 20px 0 0 0;
+  }
+}
