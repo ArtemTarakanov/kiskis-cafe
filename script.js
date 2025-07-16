@@ -84,7 +84,7 @@ function showCat() {
     catTimer = setTimeout(() => {
         hideCat();
         showCat(); // Показываем нового котика
-    }, 600);
+    }, 800);
 }
 
 // Функция скрытия котика
